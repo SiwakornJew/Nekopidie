@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'django_filters',
     'corsheaders', 
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -106,8 +107,7 @@ WSGI_APPLICATION = 'test_api.wsgi.application'
 # }
     
 DATABASES = {
-    #db_from_env = dj_database_url.config(conn_max_age=600)
-    #DATABASES['default'].update(db_from_env)
+
     'default': {
        'ENGINE': 'django.db.backends.mysql',
         'NAME':  'django_reat_product_api',
@@ -116,21 +116,7 @@ DATABASES = {
         'HOST':'localhost',
         'POST':'',
     }
-}
-'''''
-DATABASES = {
-    #db_from_env = dj_database_url.config(conn_max_age=600)
-    #DATABASES['default'].update(db_from_env)
-    'default': {
-       'ENGINE': 'django.db.backends.mysql',
-        'NAME':  'django_reat_product_api',
-        'USER': 'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'POST':'',
-    }
-}
-    '''''''''
+} 
 DATABASES = {
     #db_from_env = dj_database_url.config(conn_max_age=600)
     #DATABASES['default'].update(db_from_env)
@@ -184,6 +170,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL ='/media/'
+MEDIA_ROOT =os.path.join(BASE_DIR,'media/')
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
