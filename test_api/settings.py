@@ -95,6 +95,44 @@ DATABASES = {
         'POST':'',
     }
 }
+DATABASES = {
+    #db_from_env = dj_database_url.config(conn_max_age=600)
+    #DATABASES['default'].update(db_from_env)
+    'default': {
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME':  'django_reat_product_api',
+        'USER': 'root',
+        'PASSWORD':'',
+        'HOST':'localhost',
+        'POST':'',
+    }
+}
+'''''
+DATABASES = {
+    #db_from_env = dj_database_url.config(conn_max_age=600)
+    #DATABASES['default'].update(db_from_env)
+    'default': {
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME':  'django_reat_product_api',
+        'USER': 'root',
+        'PASSWORD':'',
+        'HOST':'localhost',
+        'POST':'',
+    }
+}
+    '''''''''
+DATABASES = {
+    #db_from_env = dj_database_url.config(conn_max_age=600)
+    #DATABASES['default'].update(db_from_env)
+    'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':  'd5taqso5dppb76',
+        'USER': 'yiydpqepvjaslz',
+        'PASSWORD':'e58e623cdc1f1a13dc07533cb90991cc676ff09b66d552c17b9d2fc3159344b9',
+        'HOST':'ec2-3-229-166-245.compute-1.amazonaws.com',
+        'POST':'5432',
+    }
+}
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
