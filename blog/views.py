@@ -7,11 +7,11 @@ from .models import Blogs
 @api_view(['GET'])
 def apiOverview(request):
     api_urls = {
-        'List': '/Blog-list/',
-        'Detail View': '/Blog-detail/<int:id>/',
-        'Create': '/Blog-create/',
-        'Update': '/Blog-update/<int:id>/',
-        'Delete': '/Blog-detail/<int:id>/',
+        'List': '/blog-list/',
+        'Detail View': '/blog-detail/<int:id>/',
+        'Create': '/blog-create/',
+        'Update': '/blog-update/<int:id>/',
+        'Delete': '/blog-detail/<int:id>/',
     }
     return Response(api_urls)
 
@@ -30,7 +30,6 @@ def ViewBlog(request,pk):
 @api_view(['POST'])
 def CreateBlog(request):
     serializers =BlogsSerilizer(data=request.data)
-
     if serializers.is_valid():
         serializers.save()
 
