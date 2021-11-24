@@ -82,19 +82,20 @@ WSGI_APPLICATION = 'test_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-
-DATABASES = {
-    #db_from_env = dj_database_url.config(conn_max_age=600)
-    #DATABASES['default'].update(db_from_env)
-    'default': {
-       'ENGINE': 'django.db.backends.mysql',
-        'NAME':  'django_reat_product_api',
-        'USER': 'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'POST':'',
-    }
-}
+   
+# DATABASES = {
+#     #db_from_env = dj_database_url.config(conn_max_age=600)
+#     #DATABASES['default'].update(db_from_env)
+#     'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#         'NAME':  'django_reat_product_api',
+#         'USER': 'root',
+#         'PASSWORD':'',
+#         'HOST':'localhost',
+#         'POST':'',
+#     }
+# }
+    
 DATABASES = {
     #db_from_env = dj_database_url.config(conn_max_age=600)
     #DATABASES['default'].update(db_from_env)
