@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'django_filters',
+    'corsheaders', 
 ]
 
 MIDDLEWARE = [
@@ -56,8 +57,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
-
+CORS_ORIGIN_WHITELIST = (
+    'https://localhost:3000'
+)
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 ROOT_URLCONF = 'test_api.urls'
 
 TEMPLATES = [
