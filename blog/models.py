@@ -1,10 +1,10 @@
 from django.db import models
-
+from cloudinary.models import CloudinaryField
 # Create your models here.
 class Blogs(models.Model):
     title = models.CharField(max_length=200, null=False, blank=False)
     des = models.TextField()
-    img = models.ImageField(upload_to="blogsImages",blank=True)
+    img = CloudinaryField('image')
 
 
     def __str__(self):

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-
+from rest_framework.renderers import JSONRenderer
 from.serializers import ProductSerilizer
 from.models import Product
 # Create your views here.
@@ -21,8 +21,9 @@ def apiOverview(request):
 @api_view(['GET'])
 def ShowAll(request):
     products = Product.objects.all()
+    print(products)
     serializers =ProductSerilizer(products,many=True)
-    return Response(serializers.data)
+    return Response(serializers.data[0])
 
 @api_view(['GET'])
 def ViewProduct(request,pk):

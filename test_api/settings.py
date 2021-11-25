@@ -15,6 +15,10 @@ import os
 import django_heroku
 import dj_database_url
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -46,6 +50,8 @@ INSTALLED_APPS = [
     'django_filters',
     'corsheaders', 
     'blog',
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -172,7 +178,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL ='/media/'
-MEDIA_ROOT =os.path.join(BASE_DIR,'media/')
+MEDID_ROOT=''
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE ="cloudinary_storage.storage.MediaCloudinaryStorage"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
@@ -184,3 +192,9 @@ django_heroku.settings(locals())
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+cloudinary.config( 
+  cloud_name = "dthlppat4", 
+  api_key = "912298844617437", 
+  api_secret = "Epniq7eFWDCSAzEeE5q5BPO6IeA",
+  secure = True
+)
