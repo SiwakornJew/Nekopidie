@@ -23,7 +23,7 @@ def ShowAll(request):
     products = Product.objects.all()
     print(products)
     serializers =ProductSerilizer(products,many=True)
-    return Response(serializers.data[0])
+    return Response(serializers.data)
 
 @api_view(['GET'])
 def ViewProduct(request,pk):

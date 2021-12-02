@@ -1,3 +1,4 @@
+from typing import OrderedDict
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -17,7 +18,7 @@ def apiOverview(request):
 
 @api_view(['GET'])
 def ShowAll(request):
-    blogs = Blogs.objects.all()
+    blogs = Blogs.objects.order_by('title')
     serializers =BlogsSerilizer(blogs,many=True)
     return Response(serializers.data)
 
