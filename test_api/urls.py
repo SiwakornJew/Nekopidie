@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('apiproduct/', include('api.urls')),
     path('apiblog/', include('blog.urls')),
+    path('apishop/',include('shopPet.urls')),
+    path('apicats/',include('listcat.urls'))
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
