@@ -20,8 +20,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('apiproduct/', include('api.urls')),
-    path('apiblog/', include('blog.urls')),
-    path('apishop/',include('shopPet.urls')),
-    path('apicats/',include('listcat.urls'))
+    path('apiproduct/', include('api.urls')), #test
+    path('apiblog/', include('blog.urls')), #blogแนะนำ
+    path('apishop/',include('shopPet.urls')), #ของใช้
+    path('apicats/',include('listcat.urls')), #สายพันแมว
+    path('apifoodcats/',include('foodCat.urls')),  #อาหารแมว
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

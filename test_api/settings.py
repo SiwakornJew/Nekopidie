@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'blog',
     'cloudinary_storage',
     'shopPet',
-    'listcat'
+    'listcat',
+    'foodCat',
 
 ]
 
