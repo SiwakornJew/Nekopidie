@@ -20,7 +20,7 @@ def apiOverview(request):
 
 @api_view(['GET'])
 def ShowAll(request):
-    products = listCats.objects.all()
+    products = listCats.objects.order_by('title')
     print(products)
     serializers = catSerilizer(products,many=True)
     return Response(serializers.data)
