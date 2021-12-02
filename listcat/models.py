@@ -6,7 +6,7 @@ class listCats(models.Model):
     img = models.CharField(max_length=200,null=True , blank=True )
     title = models.CharField(max_length=200, null=False, blank=False)
     prize = models.CharField(max_length=200, null=True, blank=False)
-    recstore = models.CharField(max_length=200,null=True , blank=True )
+    #recstore = models.CharField(max_length=200,null=True , blank=True )
     temperament =  models.CharField(max_length=200, null=True, blank=False)
     coat =  models.CharField(max_length=200, null=True, blank=False)
     coat_color = models.CharField(max_length=200, null=True, blank=False)
